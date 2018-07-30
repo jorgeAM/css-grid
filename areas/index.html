@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Columnas</title>
+    <style>
+      body{
+        font-family: Arial;
+      }
+
+      .container{
+        display: grid;
+        grid-template: 100px 1fr 120px/200px 1fr;
+        grid-gap: 10px;
+        height: 100vh;
+        grid-template-areas: "header header" "left rigth" "footer footer";
+      }
+
+      .item{
+        background: lightblue;
+        padding: 10px;
+        border: 1px solid red;
+      }
+
+      .header{
+        grid-area: header;
+      }
+
+      .left{
+        grid-area: left;
+      }
+
+      .rigth{
+        grid-area: rigth;
+      }
+
+      .footer{
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="item header">Header</div>
+      <div class="item left">Left</div>
+      <div class="item rigth">Rigth</div>
+      <div class="item footer">Footer</div>
+    </section>
+  </body>
+</html>
