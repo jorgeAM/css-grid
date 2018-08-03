@@ -7,6 +7,10 @@ p{
   margin: 0;
 }
 
+.badge img{
+  max-width: 70px;
+}
+
 .hero{
   background: #23475b;
   color: white;
@@ -19,7 +23,30 @@ p{
 .hero-container{
   display: grid;
   grid-template-columns: 70px 1fr 320px;
+  grid-template-areas: "logo titulo formulario" ". description formulario" ". temporizador formulario"
 }
+
+ /*grid area*/
+ .logo{
+   grid-area: logo;
+ }
+
+ .b{
+   grid-area: b;
+ }
+
+ .description{
+   grid-area: description;
+ }
+
+ .formulario{
+   grid-area: formulario;
+ }
+
+ .temporizador{
+   grid-area: temporizador;
+ }
+/*fin grid area*/
 
 .title{
   font-size: 36px;
@@ -81,4 +108,11 @@ p{
 
 .countdown span:last-child:after{
   display: none;
+}
+
+@media screen and (max-width:768px) {
+  .hero-container{
+    grid-template-columns: 70px 1fr;
+    grid-template-areas: "logo titulo" "description description" "temporizador temporizador" "formulario formulario"
+  }
 }
